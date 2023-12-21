@@ -3,8 +3,8 @@
   <head>
     <script>
       /**
-       * SCF_GATEWAY：SCF 云函数网关地址
-       * SITE_NAME：站点名称
+       * SCF_GATEWAY：SCF Endereço do gateway da função de nuvem
+       * SITE_NAME：Nome do site
        */
       window.GLOBAL_CONFIG = {
         SCF_GATEWAY: "//ondrive.willgame.workers.dev/",
@@ -910,7 +910,7 @@
         const buttonParent = button.parentElement;
         const buttonClone = button.cloneNode(true);
         buttonParent.replaceChild(buttonClone, button);
-        input.placeholder = "请输入密码";
+        input.placeholder = "SENHA";
         buttonClone.addEventListener("click", (event) => {
           const passwd = input.value;
           if (!input.value) {
@@ -1186,7 +1186,7 @@
               default:
                 let textWrapper = document.createElement("div");
                 textWrapper.style.textAlign = "center";
-                textWrapper.innerHTML = "该文件不支持预览";
+                textWrapper.innerHTML = "Este arquivo não suporta visualização";
                 content.innerHTML = "";
                 content.appendChild(textWrapper);
                 break;
@@ -1204,7 +1204,7 @@
                 );
                 const btn = document.querySelector(".btn.quote");
                 btn.innerHTML = "已复制";
-                setTimeout(() => (btn.innerHTML = "引用"), 250);
+                setTimeout(() => (btn.innerHTML = "Citar"), 250);
               });
             document
               .querySelector(".btn.share")
@@ -1226,7 +1226,7 @@
                 );
                 const btn = document.querySelector(".btn.share");
                 btn.innerHTML = "已复制";
-                setTimeout(() => (btn.innerHTML = "分享"), 250);
+                setTimeout(() => (btn.innerHTML = "compartilhar"), 250);
               });
             switchRightDisplay("preview");
 
@@ -1603,16 +1603,16 @@
           <div class="preview">
             <div class="info">
               <div class="file-name"></div>
-              <div class="btn download">下载</div>
-              <div class="btn quote">引用</div>
-              <div class="btn share">分享</div>
+              <div class="btn download">download</div>
+              <div class="btn quote">Citar</div>
+              <div class="btn share">compartilhar</div>
             </div>
             <div class="content"></div>
           </div>
           <div class="password-wrapper">
             <div class="password">
               <input type="password" />
-              <button>提交</button>
+              <button>ENTRAR</button>
             </div>
           </div>
         </div>
